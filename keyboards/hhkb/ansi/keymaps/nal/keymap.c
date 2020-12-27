@@ -39,7 +39,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   static uint16_t mem_keycode;
   uint16_t prev_keycode = mem_keycode;
   bool is_tapped = ((!record->event.pressed) && (keycode == prev_keycode));
-  mem_keycode = keycode;
+  if (record->event.pressed) {
+    mem_keycode = keycode;
+  }
 
   switch (keycode) {
     case KC_SPC: {
