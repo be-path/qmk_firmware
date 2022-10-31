@@ -19,13 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "config_common.h"
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID    0xFEED
-#define PRODUCT_ID   0x7878
-#define DEVICE_VER   0x0001
-#define MANUFACTURER smssmssms
-#define PRODUCT      POS78
-
 /* key matrix size */
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 13
@@ -39,9 +32,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
  */
-#define MATRIX_ROW_PINS { F7, F6, F5, F4, F1, F0 }
-#define MATRIX_COL_PINS { C7, D6, B7 ,B6, B5, E6, C6, D0, D1, D3, D2,  B1, B2 }
-#define UNUSED_PINS
+#define MATRIX_ROW_PINS { F0, F1, F4, F5, F6, F7 }
+#define MATRIX_COL_PINS { B2, B1, D2, D3, D1, D0, C6, E6, B5, B6, B7, D6, C7 }
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION ROW2COL
@@ -58,6 +50,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+
+/* Hardware LED pins*/
+#define LED_CAPS_LOCK_PIN D4
+#define LED_NUM_LOCK_PIN D2
+#define LED_PIN_ON_STATE 1
 
 /* If defined, GRAVE_ESC will always act as ESC when CTRL is held.
  * This is useful for the Windows task manager shortcut (ctrl+shift+esc).
@@ -100,10 +97,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-
-/* disable these deprecated features by default */
-#define NO_ACTION_MACRO
-#define NO_ACTION_FUNCTION
 
 /* Bootmagic Lite key configuration */
 //#define BOOTMAGIC_LITE_ROW 0
