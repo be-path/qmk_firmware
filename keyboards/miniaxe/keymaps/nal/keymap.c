@@ -103,16 +103,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
     case THUMB_L2:
       if (record->event.pressed) {
-        register_code(KC_LGUI);
+        register_code(KC_LCTL);
       } else {
-        unregister_code(KC_LGUI);
+        unregister_code(KC_LCTL);
       }
       break;
     case THUMB_L2W:
       if (record->event.pressed) {
-        register_code(KC_LCTL);
+        register_code(KC_LGUI);
       } else {
-        unregister_code(KC_LCTL);
+        unregister_code(KC_LGUI);
       }
       break;
     case THUMB_L3:
@@ -127,9 +127,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
     case THUMB_R1:
       if (record->event.pressed) {
-        register_code(KC_LCTL);
+        register_code(KC_LGUI);
       } else {
-        unregister_code(KC_LCTL);
+        unregister_code(KC_LGUI);
         if (is_tapped) {
           tap_code(KC_SPC);
         }
@@ -137,9 +137,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
     case THUMB_R1W:
       if (record->event.pressed) {
-        register_code(KC_LGUI);
+        register_code(KC_LCTL);
       } else {
-        unregister_code(KC_LGUI);
+        unregister_code(KC_LCTL);
         if (is_tapped) {
           tap_code(KC_SPC);
         }
